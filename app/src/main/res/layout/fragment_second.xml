@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFrag">
+
+    <LinearLayout
+        android:id="@+id/aiuto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewPartite">
+
+        <TextView
+            android:id="@+id/partita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Numero Partita" />
+
+        <TextView
+            android:id="@+id/esito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Esito"/>
+
+        <TextView
+            android:id="@+id/tempo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Tempo" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPartite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toBottomOf="@id/aiuto">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_partite"/>
+
+    <LinearLayout
+        android:id="@+id/layout_partite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_tempo_min">
+
+        <TextView
+            android:id="@+id/testo_partite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Partite vinte" />
+
+        <TextView
+            android:id="@+id/numPartite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="0/0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tempo_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cancella">
+
+        <TextView
+            android:id="@+id/testo_tempo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Tempo minimo" />
+
+        <TextView
+            android:id="@+id/tempo_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="0:0" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancella"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancella"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

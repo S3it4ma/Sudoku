@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_decide_play">
+
+    <fragment
+        android:id="@+id/navigation_play"
+        android:name="com.example.simplefragtest.FirstFrag"
+        android:label="@string/title_play"
+        tools:layout="@layout/fragment_first" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_decide_play"
+        android:name="com.example.simplefragtest.DecideGameFrag"
+        android:label="@string/title_play"
+        tools:layout="@layout/fragment_decide_game" >
+        <action
+            android:id="@+id/action_navigation_decide_play_to_navigation_play"
+            app:destination="@id/navigation_play" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.example.simplefragtest.SecondFrag"
+        android:label="@string/title_stats"
+        tools:layout="@layout/fragment_second" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.simplefragtest.ThirdFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_third" />
+</navigation>
